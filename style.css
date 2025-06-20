@@ -1,0 +1,95 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f1b640;
+  text-align: center;
+  padding: 50px;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+}
+
+#pot {
+  position: relative;
+  width: fit-content;
+  margin: 30px auto;
+}
+
+/* Style the ramen bowl image directly */
+#pot img {
+  width: 150px;
+  border-radius: 20px 20px 10px 10px;
+}
+
+
+.steam {
+  width: 40px;
+  height: 60px;
+  /* background: rgba(255, 255, 255, 0.7); */
+  /* background-image: url('isolated_white_steam.png'); */
+  /* background-image: url('ramen_bowl.png'); */
+  position: absolute;
+  /* left: 50%; */
+  top: -30px;
+  border-radius: 50%;
+  animation: steamRise 3s infinite ease-in-out;
+}
+.steam1 { left: -3%; animation-delay: 0s; }
+.steam2 { left: -0%; animation-delay: 1s; }
+.steam3 { left: 3%; animation-delay: 2s; }
+
+.jiggle {
+  animation: jiggle 0.4s ease-in-out;
+}
+
+@keyframes steamRise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-60px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+#timer {
+  font-size: 2em;
+  margin: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #f0772b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+button:hover {
+  transform: scale(1.1); /* 🔍 Grows 10% */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25); /* Enhanced shadow */
+}
+
+button:active {
+  transform: scale(0.95); /* 👇 Slight shrink when clicked */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #c1440e;
+}
+
+@keyframes jiggle {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(3deg); }
+  50%  { transform: rotate(-3deg); }
+  75%  { transform: rotate(3deg); }
+  100% { transform: rotate(0deg); }
+}

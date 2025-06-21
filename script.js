@@ -1,7 +1,7 @@
 const timerDisplay = document.getElementById('timer');
 const startBtn = document.getElementById('startBtn');
 const message = document.getElementById('message');
-const clickSound = new Audio("hard-typewriter-click-1119.wav")
+const clickSound = new Audio("Sounds/hard-typewriter-click-1119.wav")
 
 let totalSeconds = 3 * 60 + 20; // 3 min 20 sec
 let interval = null;
